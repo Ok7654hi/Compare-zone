@@ -197,4 +197,4 @@ function sendMessage() {
             </div>`;
         msgContainer.scrollTop = msgContainer.scrollHeight;
     }, 600);
-}
+
