@@ -198,3 +198,4 @@ function sendMessage() {
         msgContainer.scrollTop = msgContainer.scrollHeight;
     }, 600);
 
+}
