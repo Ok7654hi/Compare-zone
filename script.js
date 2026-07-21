@@ -853,4 +853,8 @@ function initChatWidget() {
         });
     });
 }
-
+// Master Directory: Complete Samsung Archive + Complete Xiaomi Archive + Multi-Brand Dataset
+const devices = [
+    // --- COMPLETE SAMSUNG GALAXY ARCHIVE ---
+    { id: 5001, name: "Samsung Galaxy S9", brand: "Samsung", series: "Galaxy S", display: "5.8\" Super AMOLED", processor: "Exynos 9810 / Snapdragon 845", ram: "4GB RAM", battery: "3000 mAh, 15W", camera: "12MP OIS", os: "Android 10", price: "₹39,999", rating: "4.2", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s9-.jpg", aiTag: "Official Photo: Lilac Purple", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5002, name: "Samsung Galaxy S9+", brand: "Samsung", series: "Galaxy S", display: "6.2\" Super AMOLED", processor: "Exynos 9810 / Snapdragon 845", ram: "6GB RAM", battery: "3500 mAh, 15W", camera: "12MP Dual OIS", os: "Android 10", price: "₹49,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s9-plus-.jpg", aiTag: "Official Photo: Coral Blue", stores: [{ name: "Flipkart", url:
