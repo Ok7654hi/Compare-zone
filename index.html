@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Zone | GSMArena & 91mobiles Pro Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Live Sync Status -->
+    <header class="app-header">
+        <div class="logo">
+            <i class="fa-solid fa-mobile-screen-button"></i> <span>Compare Zone</span>
+        </div>
+        <div class="live-sync-indicator" id="sync-status">
+            <i class="fa-solid fa-rotate fa-spin"></i> <span>Syncing GSMArena & 91mobiles Pro Feeds...</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#compare">Compare</a>
+            <a href="#database">Database</a>
+            <button id="auth-btn" class="btn-login"><i class="fa-solid fa-user"></i> Login</button>
+        </nav>
+    </header>
+
+    <!-- Main Content Hub -->
+    <main class="main-container">
+        
+        <!-- Hero Section & Instant Search -->
+        <section id="home" class="hero-section">
+            <h1>Ultimate Phone Specification & Price Hub</h1>
+            <p>Professional grade specs, display ratings, charging speeds, and live e-commerce prices.</p>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="device-search" placeholder="Search phone name, brand, processor, display, or camera...">
+            </div>
+        </section>
+
+        <!-- Brand Filter Bar -->
+        <section class="filter-section">
+            <h3>Filter by Brand</h3>
+            <div id="brand-filters" class="brand-chips">
+                <button class="chip active" data-brand="all">All Brands</button>
+                <button class="chip" data-brand="Vivo">Vivo</button>
+                <button class="chip" data-brand="Samsung">Samsung</button>
+                <button class="chip" data-brand="Apple">Apple</button>
+                <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+                <button class="chip" data-brand="Poco">Poco</button>
+                <button class="chip" data-brand="iQOO">iQOO</button>
+                <button class="chip" data-brand="Realme">Realme</button>
+            </div>
+        </section>
+
+        <!-- Side-by-Side Comparison Engine -->
+        <section id="compare" class="comparison-section">
+            <h2>Side-by-Side Pro Analysis</h2>
+            <div class="comparison-grid">
+                <div class="device-card-slot" id="slot-1">
+                    <select class="device-selector" data-slot="1">
+                        <option value="">Select Device 1</option>
+                    </select>
+                    <div class="specs-preview" id="preview-1">Please select a device</div>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="device-card-slot" id="slot-2">
+                    <select class="device-selector" data-slot="2">
+                        <option value="">Select Device 2</option>
+                    </select>
+                    <div class="specs-preview" id="preview-2">Please select a device</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pro Device Database Catalog -->
+        <section id="database" class="database-section">
+            <h2>Pro Catalog (<span id="catalog-count">0</span> Phones Available)</h2>
+            <div id="device-catalog" class="catalog-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 24/7 AI Customer Support Chat Widget (Google Gemini Powered) -->
+    <div class="ai-chat-widget">
+        <button id="chat-toggle-btn" class="chat-fab"><i class="fa-solid fa-robot"></i></button>
+        <div id="chat-window" class="chat-window hidden">
+            <div class="chat-header">
+                <h4><i class="fa-solid fa-sparkles"></i> Compare Zone AI Pro</h4>
+                <button id="chat-close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="chat-body" class="chat-body">
+                <div class="chat-message bot">Hello! I'm updated with full GSMArena & 91mobiles pro spec sheets. Ask me about displays, charging speeds, or processor benchmarks!</div>
+            </div>
+            <div class="chat-quick-replies">
+                <button class="quick-chip" data-query="Phones with 120Hz display and fast charging">⚡ Display & Charging</button>
+                <button class="quick-chip" data-query="Best camera setup according to GSMArena specs">📸 Pro Camera Specs</button>
+                <button class="quick-chip" data-query="Compare Samsung S26 Ultra vs iPhone 17 Pro Max">⚖️ Flagship Showdown</button>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chat-input" placeholder="Ask AI anything...">
+                <button id="chat-send"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Integration -->
+    <script src="script.js"></script>
+</body>
+</html>
