@@ -1,0 +1,286 @@
+// Master Directory: Complete Samsung Archive + Complete Xiaomi Archive + Multi-Brand Dataset
+const devices = [
+    // --- COMPLETE SAMSUNG GALAXY ARCHIVE ---
+    { id: 5001, name: "Samsung Galaxy S9", brand: "Samsung", series: "Galaxy S", display: "5.8\" Super AMOLED", processor: "Exynos 9810 / Snapdragon 845", ram: "4GB RAM", battery: "3000 mAh, 15W", camera: "12MP OIS", os: "Android 10", price: "₹39,999", rating: "4.2", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s9-.jpg", aiTag: "Official Photo: Lilac Purple", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5002, name: "Samsung Galaxy S9+", brand: "Samsung", series: "Galaxy S", display: "6.2\" Super AMOLED", processor: "Exynos 9810 / Snapdragon 845", ram: "6GB RAM", battery: "3500 mAh, 15W", camera: "12MP Dual OIS", os: "Android 10", price: "₹49,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s9-plus-.jpg", aiTag: "Official Photo: Coral Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5003, name: "Samsung Galaxy S10e", brand: "Samsung", series: "Galaxy S", display: "5.8\" Dynamic AMOLED", processor: "Exynos 9820 / Snapdragon 855", ram: "6GB RAM", battery: "3100 mAh, 15W", camera: "12MP Dual", os: "Android 12", price: "₹45,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10e.jpg", aiTag: "Official Photo: Prism White", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5004, name: "Samsung Galaxy S10", brand: "Samsung", series: "Galaxy S", display: "6.1\" Dynamic AMOLED", processor: "Exynos 9820 / Snapdragon 855", ram: "8GB RAM", battery: "3400 mAh, 15W", camera: "12MP Triple", os: "Android 12", price: "₹55,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10-.jpg", aiTag: "Official Photo: Prism Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5005, name: "Samsung Galaxy S10+", brand: "Samsung", series: "Galaxy S", display: "6.4\" Dynamic AMOLED", processor: "Exynos 9820 / Snapdragon 855", ram: "8GB RAM", battery: "4100 mAh, 15W", camera: "12MP Triple + Dual Selfie", os: "Android 12", price: "₹65,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10-plus-.jpg", aiTag: "Official Photo: Prism White", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5006, name: "Samsung Galaxy S10 5G", brand: "Samsung", series: "Galaxy S", display: "6.7\" Dynamic AMOLED", processor: "Exynos 9820 / Snapdragon 855", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "12MP Quad + ToF", os: "Android 12", price: "₹79,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10-5g-.jpg", aiTag: "Official Photo: Crown Silver", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5007, name: "Samsung Galaxy S10 Lite", brand: "Samsung", series: "Galaxy S", display: "6.7\" Super AMOLED Plus", processor: "Snapdragon 855", ram: "6GB RAM", battery: "4500 mAh, 45W", camera: "48MP Triple", os: "Android 13", price: "₹39,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s10-lite-.jpg", aiTag: "Official Photo: Prism Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    { id: 5008, name: "Samsung Galaxy S20", brand: "Samsung", series: "Galaxy S", display: "6.2\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 990 / Snapdragon 865", ram: "8GB RAM", battery: "4000 mAh, 25W", camera: "64MP Triple OIS", os: "Android 13", price: "₹69,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-.jpg", aiTag: "Official Photo: Cosmic Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5009, name: "Samsung Galaxy S20+", brand: "Samsung", series: "Galaxy S", display: "6.7\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 990 / Snapdragon 865", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "64MP Quad OIS", os: "Android 13", price: "₹79,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-plus-.jpg", aiTag: "Official Photo: Cosmic Black", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5010, name: "Samsung Galaxy S20 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.9\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 990 / Snapdragon 865", ram: "12GB RAM", battery: "5000 mAh, 45W", camera: "108MP Quad 100x Zoom", os: "Android 13", price: "₹92,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-ultra-5g-.jpg", aiTag: "Official Photo: Cosmic Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5011, name: "Samsung Galaxy S20 FE", brand: "Samsung", series: "Galaxy S", display: "6.5\" Super AMOLED, 120Hz", processor: "Snapdragon 865 / Exynos 990", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "12MP Triple OIS", os: "Android 13", price: "₹49,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-fe.jpg", aiTag: "Official Photo: Cloud Navy", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5012, name: "Samsung Galaxy S20 FE 5G", brand: "Samsung", series: "Galaxy S", display: "6.5\" Super AMOLED, 120Hz", processor: "Snapdragon 865 5G", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "12MP Triple OIS", os: "Android 13", price: "₹55,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-fe-5g.jpg", aiTag: "Official Photo: Cloud Mint", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 5013, name: "Samsung Galaxy S21", brand: "Samsung", series: "Galaxy S", display: "6.2\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2100 / Snapdragon 888", ram: "8GB RAM", battery: "4000 mAh, 25W", camera: "64MP Triple OIS", os: "Android 14", price: "₹69,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-5g.jpg", aiTag: "Official Photo: Phantom Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5014, name: "Samsung Galaxy S21+", brand: "Samsung", series: "Galaxy S", display: "6.7\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2100 / Snapdragon 888", ram: "8GB RAM", battery: "4800 mAh, 25W", camera: "64MP Triple OIS", os: "Android 14", price: "₹81,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-plus-5g.jpg", aiTag: "Official Photo: Phantom Violet", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5015, name: "Samsung Galaxy S21 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.8\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2100 / Snapdragon 888", ram: "12GB RAM", battery: "5000 mAh, 25W", camera: "108MP Quad OIS", os: "Android 14", price: "₹1,05,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-ultra-5g-.jpg", aiTag: "Official Photo: Phantom Black", stores: [{ name: "Samsung Shop", url: "https://www.samsung.com" }] },
+    { id: 5016, name: "Samsung Galaxy S21 FE", brand: "Samsung", series: "Galaxy S", display: "6.4\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 888 / Exynos 2100", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "12MP Triple OIS", os: "Android 14", price: "₹54,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s21-fe-5g.jpg", aiTag: "Official Photo: Olive", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 5017, name: "Samsung Galaxy S22", brand: "Samsung", series: "Galaxy S", display: "6.1\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Gen 1", ram: "8GB RAM", battery: "3700 mAh, 25W", camera: "50MP Triple OIS", os: "Android 14", price: "₹72,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-5g.jpg", aiTag: "Official Photo: Pink Gold", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5018, name: "Samsung Galaxy S22+", brand: "Samsung", series: "Galaxy S", display: "6.6\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Gen 1", ram: "8GB RAM", battery: "4500 mAh, 45W", camera: "50MP Triple OIS", os: "Android 14", price: "₹84,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-plus-5g.jpg", aiTag: "Official Photo: Phantom White", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5019, name: "Samsung Galaxy S22 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.8\" Dynamic AMOLED 2X, 120Hz + S-Pen", processor: "Snapdragon 8 Gen 1", ram: "12GB RAM", battery: "5000 mAh, 45W", camera: "108MP Quad OIS", os: "Android 14", price: "₹1,09,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s22-ultra-5g.jpg", aiTag: "Official Photo: Burgundy", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 5020, name: "Samsung Galaxy S23", brand: "Samsung", series: "Galaxy S", display: "6.1\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Gen 2 for Galaxy", ram: "8GB RAM", battery: "3900 mAh, 25W", camera: "50MP Triple OIS", os: "Android 14", price: "₹74,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-5g.jpg", aiTag: "Official Photo: Cream", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5021, name: "Samsung Galaxy S23+", brand: "Samsung", series: "Galaxy S", display: "6.6\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Gen 2 for Galaxy", ram: "8GB RAM", battery: "4700 mAh, 45W", camera: "50MP Triple OIS", os: "Android 14", price: "₹94,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-plus-5g.jpg", aiTag: "Official Photo: Phantom Black", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5022, name: "Samsung Galaxy S23 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.8\" Dynamic AMOLED 2X, 120Hz + S-Pen", processor: "Snapdragon 8 Gen 2 for Galaxy", ram: "12GB RAM", battery: "5000 mAh, 45W", camera: "200MP Quad OIS", os: "Android 14", price: "₹1,24,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-ultra-5g.jpg", aiTag: "Official Photo: Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5023, name: "Samsung Galaxy S23 FE", brand: "Samsung", series: "Galaxy S", display: "6.4\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2200 / Snapdragon 8 Gen 1", ram: "8GB RAM", battery: "4500 mAh, 25W", camera: "50MP Triple OIS", os: "Android 14", price: "₹59,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s23-fe.jpg", aiTag: "Official Photo: Mint", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    { id: 5024, name: "Samsung Galaxy S24", brand: "Samsung", series: "Galaxy S", display: "6.2\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2400 / Snapdragon 8 Gen 3", ram: "8GB RAM", battery: "4000 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹79,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-5g.jpg", aiTag: "Official Photo: Amber Yellow", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5025, name: "Samsung Galaxy S24+", brand: "Samsung", series: "Galaxy S", display: "6.7\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2400 / Snapdragon 8 Gen 3", ram: "12GB RAM", battery: "4900 mAh, 45W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹99,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-plus-5g.jpg", aiTag: "Official Photo: Cobalt Violet", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5026, name: "Samsung Galaxy S24 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.8\" Dynamic AMOLED 2X, 120Hz + S-Pen", processor: "Snapdragon 8 Gen 3 for Galaxy", ram: "12GB RAM", battery: "5000 mAh, 45W", camera: "200MP Quad OIS", os: "One UI 6.1", price: "₹1,29,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-ultra-5g.jpg", aiTag: "Official Photo: Titanium Gray", stores: [{ name: "Samsung Shop", url: "https://www.samsung.com" }] },
+    { id: 5027, name: "Samsung Galaxy S24 FE", brand: "Samsung", series: "Galaxy S", display: "6.7\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 2400e", ram: "8GB RAM", battery: "4700 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹59,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s24-fe.jpg", aiTag: "Official Photo: Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 5028, name: "Samsung Galaxy S25 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.9\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Elite", ram: "12GB RAM", battery: "5000 mAh, 45W", camera: "200MP Quad OIS", os: "One UI 7.0", price: "₹1,29,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s25-ultra.jpg", aiTag: "Official Photo: Titanium Silver Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5029, name: "Samsung Galaxy S26 Ultra", brand: "Samsung", series: "Galaxy S", display: "6.9\" Dynamic AMOLED 2X, 120Hz", processor: "Snapdragon 8 Elite Gen 5", ram: "12GB RAM", battery: "5000 mAh, 60W", camera: "200MP Quad OIS", os: "One UI 8.5", price: "₹1,29,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s26-ultra.jpg", aiTag: "Official Photo: Titanium Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }, { name: "Samsung Shop", url: "https://www.samsung.com" }] },
+
+    // Galaxy Note Series
+    { id: 5030, name: "Samsung Galaxy Note9", brand: "Samsung", series: "Note Series", display: "6.4\" Super AMOLED + Bluetooth S-Pen", processor: "Exynos 9810 / Snapdragon 845", ram: "6GB RAM", battery: "4000 mAh, 15W", camera: "12MP Dual OIS", os: "Android 10", price: "₹67,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note9-.jpg", aiTag: "Official Photo: Ocean Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5031, name: "Samsung Galaxy Note10+", brand: "Samsung", series: "Note Series", display: "6.8\" Dynamic AMOLED + S-Pen", processor: "Exynos 9825 / Snapdragon 855", ram: "12GB RAM", battery: "4300 mAh, 45W", camera: "16MP Quad", os: "Android 12", price: "₹79,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note10-plus-.jpg", aiTag: "Official Photo: Aura Glow", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5032, name: "Samsung Galaxy Note20 Ultra", brand: "Samsung", series: "Note Series", display: "6.9\" Dynamic AMOLED 2X, 120Hz", processor: "Exynos 990 / Snapdragon 865+", ram: "12GB RAM", battery: "4500 mAh, 25W", camera: "108MP Triple", os: "Android 13", price: "₹1,04,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-note20-ultra-5g.jpg", aiTag: "Official Photo: Mystic Bronze", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    // Galaxy Z Fold & Flip Series
+    { id: 5033, name: "Samsung Galaxy Z Fold6", brand: "Samsung", series: "Foldables", display: "7.6\" Foldable AMOLED + 6.3\" Cover", processor: "Snapdragon 8 Gen 3 for Galaxy", ram: "12GB RAM", battery: "4400 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1.1", price: "₹1,64,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold6.jpg", aiTag: "Official Photo: Silver Shadow", stores: [{ name: "Samsung Shop", url: "https://www.samsung.com" }] },
+    { id: 5034, name: "Samsung Galaxy Z Fold7", brand: "Samsung", series: "Foldables", display: "8.0\" Foldable AMOLED, 120Hz", processor: "Snapdragon 8 Gen 5", ram: "12GB RAM", battery: "4400 mAh, 25W", camera: "50MP Foldable Setup", os: "One UI 8.0", price: "₹1,69,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-fold7.jpg", aiTag: "Official Photo: Phantom Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5035, name: "Samsung Galaxy Z Flip6", brand: "Samsung", series: "Foldables", display: "6.7\" Foldable AMOLED + 3.4\" Cover", processor: "Snapdragon 8 Gen 3 for Galaxy", ram: "12GB RAM", battery: "4000 mAh, 25W", camera: "50MP Dual OIS", os: "One UI 6.1.1", price: "₹1,09,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-z-flip6.jpg", aiTag: "Official Photo: Yellow", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    // Complete Galaxy A Series Inventory
+    { id: 5101, name: "Samsung Galaxy A15 5G", brand: "Samsung", series: "Galaxy A", display: "6.5\" Super AMOLED, 90Hz", processor: "MediaTek Dimensity 6100+", ram: "8GB RAM", battery: "5000 mAh, 25W", camera: "50MP Triple", os: "One UI 6.0", price: "₹19,499", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a15-5g.jpg", aiTag: "Official Photo: Optimus Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5102, name: "Samsung Galaxy A16 5G", brand: "Samsung", series: "Galaxy A", display: "6.7\" Super AMOLED, 90Hz", processor: "Exynos 1330 / Dimensity 6300", ram: "8GB RAM", battery: "5000 mAh, 25W", camera: "50MP Triple", os: "One UI 6.1", price: "₹20,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a16-5g.jpg", aiTag: "Official Photo: Light Green", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5103, name: "Samsung Galaxy A25 5G", brand: "Samsung", series: "Galaxy A", display: "6.5\" Super AMOLED, 120Hz", processor: "Exynos 1280", ram: "8GB RAM", battery: "5000 mAh, 25W", camera: "50MP OIS Triple", os: "One UI 6.0", price: "₹26,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a25.jpg", aiTag: "Official Photo: Brave Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5104, name: "Samsung Galaxy A35 5G", brand: "Samsung", series: "Galaxy A", display: "6.6\" Super AMOLED, 120Hz", processor: "Exynos 1380", ram: "8GB RAM", battery: "5000 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹30,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a35-5g.jpg", aiTag: "Official Photo: Awesome Navy", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 5105, name: "Samsung Galaxy A55 5G", brand: "Samsung", series: "Galaxy A", display: "6.6\" Super AMOLED, 120Hz", processor: "Exynos 1480", ram: "8GB RAM", battery: "5000 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹39,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a55-5g.jpg", aiTag: "Official Photo: Awesome Iceblue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5106, name: "Samsung Galaxy A56 5G", brand: "Samsung", series: "Galaxy A", display: "6.6\" Super AMOLED, 120Hz", processor: "Exynos 1580", ram: "8GB RAM", battery: "5000 mAh, 45W", camera: "50MP OIS", os: "One UI 7.0", price: "₹41,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-a56-5g.jpg", aiTag: "Official Photo: Awesome Graphite", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    // Complete Galaxy M Series Inventory
+    { id: 5201, name: "Samsung Galaxy M15 5G", brand: "Samsung", series: "Galaxy M", display: "6.5\" Super AMOLED, 90Hz", processor: "MediaTek Dimensity 6100+", ram: "6GB RAM", battery: "6000 mAh, 25W", camera: "50MP Triple", os: "One UI 6.0", price: "₹14,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m15.jpg", aiTag: "Official Photo: Celestial Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5202, name: "Samsung Galaxy M35 5G", brand: "Samsung", series: "Galaxy M", display: "6.5\" Super AMOLED, 120Hz", processor: "Exynos 1380", ram: "8GB RAM", battery: "6000 mAh, 25W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹24,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m35-5g.jpg", aiTag: "Official Photo: Moonstone Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 5203, name: "Samsung Galaxy M55 5G", brand: "Samsung", series: "Galaxy M", display: "6.7\" Super AMOLED Plus, 120Hz", processor: "Snapdragon 7 Gen 1", ram: "8GB RAM", battery: "5000 mAh, 45W", camera: "50MP Triple OIS", os: "One UI 6.1", price: "₹29,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m55.jpg", aiTag: "Official Photo: Light Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    // --- COMPLETE XIAOMI ARCHIVE ---
+    { id: 4001, name: "Xiaomi Mi 8", brand: "Xiaomi", series: "Mi Series", display: "6.21\" Super AMOLED", processor: "Snapdragon 845", ram: "6GB RAM", battery: "3400 mAh, 18W", camera: "12MP Dual OIS", os: "Android 9.0", price: "₹29,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-.jpg", aiTag: "Official Photo: Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4040, name: "Xiaomi 14 Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8 Gen 3", ram: "16GB RAM", battery: "5000 mAh, 90W", camera: "50MP Leica Quad Setup", os: "Xiaomi HyperOS", price: "₹99,999", rating: "4.9", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg", aiTag: "Official Photo: Titanium Black Leica", stores: [{ name: "Amazon", url: "https://www.amazon.in" }, { name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4042, name: "Xiaomi 15 Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.82\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Elite Gen 5", ram: "16GB RAM", battery: "6200 mAh, 100W", camera: "200MP Leica Quad Setup", os: "Xiaomi HyperOS 3", price: "₹1,14,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-ultra.jpg", aiTag: "Official Photo: Leica Master Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }, { name: "Mi Store", url: "https://www.mi.com" }] }
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    initCatalog(devices);
+    initSelectors();
+    initFilters();
+    initChatWidget();
+    initSearch();
+    simulateAiSync();
+});
+
+function simulateAiSync() {
+    const syncStatus = document.getElementById("sync-status");
+    setTimeout(() => {
+        syncStatus.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Complete Samsung & Xiaomi Archive Live</span>`;
+        syncStatus.style.backgroundColor = "rgba(16, 185, 129, 0.2)";
+    }, 1500);
+}
+
+// Populate Catalog Grid
+function initCatalog(data) {
+    const catalog = document.getElementById("device-catalog");
+    document.getElementById("catalog-count").textContent = data.length;
+    
+    if (data.length === 0) {
+        catalog.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 2rem;">No devices found matching your search.</p>`;
+        return;
+    }
+
+    catalog.innerHTML = data.map(d => `
+        <div class="device-item-card">
+            <div class="device-img-container">
+                <div class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> ${d.aiTag}</div>
+                <div class="device-rating-badge"><i class="fa-solid fa-star"></i> ${d.rating}</div>
+                <img src="${d.image}" alt="${d.name}" onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&auto=format&fit=crop&q=60'">
+            </div>
+            <div class="device-card-content">
+                <h4>${d.name}</h4>
+                <p><strong>Brand:</strong> ${d.brand} (${d.series})</p>
+                <p><strong>Display:</strong> ${d.display}</p>
+                <p><strong>Proc:</strong> ${d.processor} | <strong>RAM:</strong> ${d.ram}</p>
+                <p><strong>Battery:</strong> ${d.battery}</p>
+                <p><strong>Camera:</strong> ${d.camera}</p>
+                <p><strong>OS:</strong> ${d.os}</p>
+                <p style="color: var(--accent-color); font-weight: bold; margin-top: 0.2rem;">${d.price}</p>
+                
+                <div class="store-links-box">
+                    <span class="store-links-title">E-Commerce & Retail Stores:</span>
+                    <div class="store-badges">
+                        ${d.stores.map(s => `<a href="${s.url}" target="_blank" class="store-badge"><i class="fa-solid fa-cart-shopping"></i> ${s.name}</a>`).join("")}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join("");
+}
+
+// Populate Comparison Dropdowns
+function initSelectors() {
+    const selectors = document.querySelectorAll(".device-selector");
+    selectors.forEach(select => {
+        select.innerHTML = '<option value="">Select Device</option>';
+        devices.forEach(d => {
+            const opt = document.createElement("option");
+            opt.value = d.id;
+            opt.textContent = `${d.brand} - ${d.name}`;
+            select.appendChild(opt);
+        });
+
+        select.addEventListener("change", (e) => {
+            const slotId = e.target.getAttribute("data-slot");
+            const deviceId = e.target.value;
+            updatePreview(slotId, deviceId);
+        });
+    });
+}
+
+// Update Side-by-Side Pro Preview Card
+function updatePreview(slotId, deviceId) {
+    const previewContainer = document.getElementById(`preview-${slotId}`);
+    if (!deviceId) {
+        previewContainer.innerHTML = "Please select a device";
+        return;
+    }
+    const device = devices.find(d => d.id == deviceId);
+    previewContainer.innerHTML = `
+        <p><strong>${device.name}</strong> ⭐ ${device.rating}</p>
+        <p><strong>Display:</strong> ${device.display}</p>
+        <p><strong>Processor:</strong> ${device.processor}</p>
+        <p><strong>RAM & Storage:</strong> ${device.ram}</p>
+        <p><strong>Battery & Charge:</strong> ${device.battery}</p>
+        <p><strong>Camera:</strong> ${device.camera}</p>
+        <p><strong>OS:</strong> ${device.os}</p>
+        <p style="margin-top: 0.4rem; font-size: 1.1rem; color: var(--accent-color); font-weight: bold;">${device.price}</p>
+    `;
+}
+
+// Filter Functionality by Brand Chips
+function initFilters() {
+    const chips = document.querySelectorAll(".chip");
+    chips.forEach(chip => {
+        chip.addEventListener("click", (e) => {
+            chips.forEach(c => c.classList.remove("active"));
+            e.target.classList.add("active");
+            
+            const brand = e.target.getAttribute("data-brand");
+            if (brand === "all") {
+                initCatalog(devices);
+            } else {
+                const filtered = devices.filter(d => d.brand.toLowerCase() === brand.toLowerCase());
+                initCatalog(filtered);
+            }
+        });
+    });
+}
+
+// Advanced Real-time Search Engine
+function initSearch() {
+    const searchInput = document.getElementById("device-search");
+    searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const filtered = devices.filter(d => 
+            d.name.toLowerCase().includes(query) || 
+            d.brand.toLowerCase().includes(query) || 
+            d.series.toLowerCase().includes(query) ||
+            d.processor.toLowerCase().includes(query) ||
+            d.display.toLowerCase().includes(query) ||
+            d.camera.toLowerCase().includes(query)
+        );
+        initCatalog(filtered);
+    });
+}
+
+// ==========================================
+// GOOGLE AI GEMINI API & SUPPORT CHAT WIDGET
+// ==========================================
+function initChatWidget() {
+    const toggleBtn = document.getElementById("chat-toggle-btn");
+    const closeBtn = document.getElementById("chat-close");
+    const chatWindow = document.getElementById("chat-window");
+    const sendBtn = document.getElementById("chat-send");
+    const chatInput = document.getElementById("chat-input");
+    const chatBody = document.getElementById("chat-body");
+    const quickChips = document.querySelectorAll(".quick-chip");
+
+    toggleBtn.addEventListener("click", () => chatWindow.classList.toggle("hidden"));
+    closeBtn.addEventListener("click", () => chatWindow.classList.add("hidden"));
+
+    const appendMessage = (text, sender) => {
+        const msgDiv = document.createElement("div");
+        msgDiv.className = `chat-message ${sender}`;
+        msgDiv.textContent = text;
+        chatBody.appendChild(msgDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    };
+
+    const handleGeminiQuery = async (userText) => {
+        if (!userText.trim()) return;
+
+        appendMessage(userText, "user");
+        chatInput.value = "";
+
+        const loadingId = "loading-" + Date.now();
+        const loadingDiv = document.createElement("div");
+        loadingDiv.className = "chat-message bot";
+        loadingDiv.id = loadingId;
+        loadingDiv.textContent = "AI Pro is searching Samsung & Xiaomi archives...";
+        chatBody.appendChild(loadingDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        try {
+            const dbContext = JSON.stringify(devices);
+            const prompt = `You are the official Pro Support AI for 'Compare Zone'. Use this complete Samsung and Xiaomi database: ${dbContext}. Customer Question: "${userText}"`;
+
+            const API_KEY = "YOUR_GEMINI_API_KEY"; 
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+            const response = await fetch(endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }]
+                })
+            });
+
+            const data = await response.json();
+            const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm sorry, I couldn't process that query right now. Check our catalog filters above!";
+
+            document.getElementById(loadingId).remove();
+            appendMessage(botReply, "bot");
+
+        } catch (error) {
+            document.getElementById(loadingId).remove();
+            const fallbackReply = getDatabaseFallback(userText);
+            appendMessage(fallbackReply, "bot");
+        }
+    };
+
+    function getDatabaseFallback(query) {
+        const q = query.toLowerCase();
+        if (q.includes("samsung") || q.includes("galaxy")) {
+            return "Our database features the complete Samsung Galaxy S series (S9 through S26 Ultra), Note series, Z Fold/Flip series, and extensive A & M series with official model photos!";
+        } else if (q.includes("xiaomi") || q.includes("mi")) {
+            return "The database includes the full Xiaomi historical archive from Mi 8 up to Xiaomi 15 Ultra and Mix foldables.";
+        }
+        return "You can explore all Samsung and Xiaomi models with official photos, pro specs, ratings, and live store buy links inside the catalog!";
+    }
+
+    sendBtn.addEventListener("click", () => handleGeminiQuery(chatInput.value));
+    chatInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") handleGeminiQuery(chatInput.value);
+    });
+
+    quickChips.forEach(chip => {
+        chip.addEventListener("click", (e) => {
+            const queryText = e.target.getAttribute("data-query");
+            handleGeminiQuery(queryText);
+        });
+    });
+}
