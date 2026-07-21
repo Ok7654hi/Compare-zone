@@ -1,0 +1,329 @@
+// Master Directory: Line-by-Line Complete Xiaomi Archive + Samsung Archive + Multi-Brand Dataset
+const devices = [
+    // --- XIAOMI MI 8 SERIES ---
+    { id: 4001, name: "Xiaomi Mi 8", brand: "Xiaomi", series: "Mi Series", display: "6.21\" Super AMOLED", processor: "Snapdragon 845", ram: "6GB RAM", battery: "3400 mAh, 18W", camera: "12MP Dual OIS", os: "Android 9.0", price: "₹29,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-.jpg", aiTag: "Official Photo: Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4002, name: "Xiaomi Mi 8 SE", brand: "Xiaomi", series: "Mi Series", display: "5.88\" Super AMOLED", processor: "Snapdragon 710", ram: "6GB RAM", battery: "3120 mAh, 18W", camera: "12MP Dual", os: "Android 9.0", price: "₹22,999", rating: "4.2", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-se.jpg", aiTag: "Official Photo: Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4003, name: "Xiaomi Mi 8 Lite", brand: "Xiaomi", series: "Mi Series", display: "6.26\" IPS LCD", processor: "Snapdragon 660", ram: "6GB RAM", battery: "3350 mAh, 18W", camera: "12MP Dual", os: "Android 9.0", price: "₹18,999", rating: "4.1", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-lite.jpg", aiTag: "Official Photo: Gradient Aurora", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4004, name: "Xiaomi Mi 8 Pro", brand: "Xiaomi", series: "Mi Series", display: "6.21\" Super AMOLED", processor: "Snapdragon 845", ram: "8GB RAM", battery: "3000 mAh, 18W", camera: "12MP Dual OIS", os: "Android 9.0", price: "₹34,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-pro.jpg", aiTag: "Official Photo: Transparent Edition", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4005, name: "Xiaomi Mi 8 Explorer Edition", brand: "Xiaomi", series: "Mi Series", display: "6.21\" Super AMOLED", processor: "Snapdragon 845", ram: "8GB RAM", battery: "3000 mAh, 18W", camera: "12MP Dual OIS", os: "Android 9.0", price: "₹39,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-8-explorer.jpg", aiTag: "Official Photo: Transparent Back", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+
+    // --- XIAOMI MI 9 SERIES ---
+    { id: 4006, name: "Xiaomi Mi 9", brand: "Xiaomi", series: "Mi Series", display: "6.39\" Super AMOLED", processor: "Snapdragon 855", ram: "6GB RAM", battery: "3300 mAh, 27W", camera: "48MP Triple", os: "Android 10", price: "₹35,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9-.jpg", aiTag: "Official Photo: Piano Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4007, name: "Xiaomi Mi 9 SE", brand: "Xiaomi", series: "Mi Series", display: "5.97\" Super AMOLED", processor: "Snapdragon 712", ram: "6GB RAM", battery: "3070 mAh, 18W", camera: "48MP Triple", os: "Android 10", price: "₹23,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9-se.jpg", aiTag: "Official Photo: Violet", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4008, name: "Xiaomi Mi 9 Lite", brand: "Xiaomi", series: "Mi Series", display: "6.39\" AMOLED", processor: "Snapdragon 710", ram: "6GB RAM", battery: "4030 mAh, 18W", camera: "48MP Triple", os: "Android 10", price: "₹19,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9-lite.jpg", aiTag: "Official Photo: Pearl White", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4009, name: "Xiaomi Mi 9T", brand: "Xiaomi", series: "Mi Series", display: "6.39\" AMOLED, Pop-up", processor: "Snapdragon 730", ram: "6GB RAM", battery: "4000 mAh, 18W", camera: "48MP Triple", os: "Android 10", price: "₹24,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9t-.jpg", aiTag: "Official Photo: Carbon Black", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4010, name: "Xiaomi Mi 9T Pro", brand: "Xiaomi", series: "Mi Series", display: "6.39\" AMOLED, Pop-up", processor: "Snapdragon 855", ram: "6GB RAM", battery: "4000 mAh, 27W", camera: "48MP Triple", os: "Android 10", price: "₹27,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9t-pro.jpg", aiTag: "Official Photo: Glacier Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4011, name: "Xiaomi Mi 9 Pro 5G", brand: "Xiaomi", series: "Mi Series", display: "6.39\" Super AMOLED", processor: "Snapdragon 855+", ram: "8GB RAM", battery: "4000 mAh, 40W", camera: "48MP Triple", os: "Android 10", price: "₹39,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9-pro-5g.jpg", aiTag: "Official Photo: Titanium Black", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4012, name: "Xiaomi Mi 9 Explorer", brand: "Xiaomi", series: "Mi Series", display: "6.39\" Super AMOLED", processor: "Snapdragon 855", ram: "8GB RAM", battery: "3300 mAh, 27W", camera: "48MP Dual", os: "Android 10", price: "₹42,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-9-explorer.jpg", aiTag: "Official Photo: Transparent Back", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+
+    // --- XIAOMI MI A SERIES ---
+    { id: 4013, name: "Xiaomi Mi A2", brand: "Xiaomi", series: "Mi A Series", display: "5.99\" IPS LCD", processor: "Snapdragon 660", ram: "4GB RAM", battery: "3000 mAh, 18W", camera: "20MP + 12MP", os: "Android One", price: "₹16,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-a2-new.jpg", aiTag: "Official Photo: Gold", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4014, name: "Xiaomi Mi A2 Lite", brand: "Xiaomi", series: "Mi A Series", display: "5.84\" IPS LCD", processor: "Snapdragon 625", ram: "4GB RAM", battery: "4000 mAh, 10W", camera: "12MP Dual", os: "Android One", price: "₹13,999", rating: "4.2", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-a2-lite.jpg", aiTag: "Official Photo: Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4015, name: "Xiaomi Mi A3", brand: "Xiaomi", series: "Mi A Series", display: "6.01\" AMOLED", processor: "Snapdragon 665", ram: "4GB RAM", battery: "4030 mAh, 18W", camera: "48MP Triple", os: "Android One", price: "₹12,999", rating: "4.2", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-a3.jpg", aiTag: "Official Photo: More Than White", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    // --- XIAOMI MAX & MIX SERIES ---
+    { id: 4016, name: "Xiaomi Mi Max 3", brand: "Xiaomi", series: "Max Series", display: "6.9\" IPS LCD", processor: "Snapdragon 636", ram: "4GB RAM", battery: "5500 mAh, 18W", camera: "12MP Dual", os: "Android 9.0", price: "₹17,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-max-3.jpg", aiTag: "Official Photo: Deep Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4017, name: "Xiaomi Mi Mix 2S", brand: "Xiaomi", series: "Mix Series", display: "5.99\" IPS Ceramic", processor: "Snapdragon 845", ram: "6GB RAM", battery: "3400 mAh, 18W", camera: "12MP Dual OIS", os: "Android 9.0", price: "₹29,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-mix-2s.jpg", aiTag: "Official Photo: Ceramic White", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4018, name: "Xiaomi Mi Mix 3", brand: "Xiaomi", series: "Mix Series", display: "6.39\" Super AMOLED Slider", processor: "Snapdragon 845", ram: "6GB RAM", battery: "3200 mAh, 18W", camera: "12MP Dual", os: "Android 10", price: "₹37,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-mix-3.jpg", aiTag: "Official Photo: Jade Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4019, name: "Xiaomi Mi Mix Alpha", brand: "Xiaomi", series: "Mix Series", display: "7.92\" Surround Flexible OLED", processor: "Snapdragon 855+", ram: "12GB RAM", battery: "4050 mAh, 40W", camera: "108MP Surround Camera", os: "MIUI Alpha", price: "₹1,99,999", rating: "4.9", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-mix-alpha.jpg", aiTag: "Official Photo: Surround Display Concept", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+
+    // --- XIAOMI MI NOTE 10 SERIES ---
+    { id: 4020, name: "Xiaomi Mi Note 10", brand: "Xiaomi", series: "Note Series", display: "6.47\" Curved AMOLED", processor: "Snapdragon 730G", ram: "6GB RAM", battery: "5260 mAh, 30W", camera: "108MP Penta", os: "Android 11", price: "₹38,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-note-10.jpg", aiTag: "Official Photo: Aurora Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4021, name: "Xiaomi Mi Note 10 Lite", brand: "Xiaomi", series: "Note Series", display: "6.47\" Curved AMOLED", processor: "Snapdragon 730G", ram: "6GB RAM", battery: "5260 mAh, 30W", camera: "64MP Quad", os: "Android 11", price: "₹28,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-note-10-lite.jpg", aiTag: "Official Photo: Glacier White", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4022, name: "Xiaomi Mi Note 10 Pro", brand: "Xiaomi", series: "Note Series", display: "6.47\" Curved AMOLED", processor: "Snapdragon 730G", ram: "8GB RAM", battery: "5260 mAh, 30W", camera: "108MP Penta", os: "Android 11", price: "₹42,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-note-10-pro-.jpg", aiTag: "Official Photo: Glacier Pro", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    // --- XIAOMI MI 10 SERIES ---
+    { id: 4023, name: "Xiaomi Mi 10", brand: "Xiaomi", series: "Mi Series", display: "6.67\" Curved AMOLED, 90Hz", processor: "Snapdragon 865 5G", ram: "8GB RAM", battery: "4780 mAh, 30W", camera: "108MP Quad OIS", os: "Android 12", price: "₹49,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi10-5g.jpg", aiTag: "Official Photo: Twilight Grey", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4024, name: "Xiaomi Mi 10 Pro", brand: "Xiaomi", series: "Mi Series", display: "6.67\" Curved AMOLED, 90Hz", processor: "Snapdragon 865", ram: "8GB RAM", battery: "4500 mAh, 50W", camera: "108MP Quad", os: "Android 12", price: "₹59,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-pro-5g.jpg", aiTag: "Official Photo: Solstice Grey", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4025, name: "Xiaomi Mi 10 Lite", brand: "Xiaomi", series: "Mi Series", display: "6.57\" AMOLED", processor: "Snapdragon 765G", ram: "6GB RAM", battery: "4160 mAh, 20W", camera: "48MP Quad", os: "Android 11", price: "₹26,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-lite.jpg", aiTag: "Official Photo: Cosmic Grey", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4026, name: "Xiaomi Mi 10 Lite Zoom", brand: "Xiaomi", series: "Mi Series", display: "6.57\" AMOLED", processor: "Snapdragon 765G", ram: "8GB RAM", battery: "4160 mAh, 20W", camera: "48MP Periscope Zoom", os: "Android 11", price: "₹29,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-youth-5g.jpg", aiTag: "Official Photo: Zoom Edition", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4027, name: "Xiaomi Mi 10 Youth", brand: "Xiaomi", series: "Mi Series", display: "6.57\" AMOLED", processor: "Snapdragon 765G", ram: "6GB RAM", battery: "4160 mAh, 20W", camera: "48MP Quad", os: "Android 11", price: "₹24,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-youth-5g.jpg", aiTag: "Official Photo: Youth Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4028, name: "Xiaomi Mi 10 Ultra", brand: "Xiaomi", series: "Mi Series", display: "6.67\" OLED, 120Hz", processor: "Snapdragon 865", ram: "12GB RAM", battery: "4500 mAh, 120W", camera: "48MP 120x Zoom", os: "Android 12", price: "₹69,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-ultra.jpg", aiTag: "Official Photo: Transparent Edition", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4029, name: "Xiaomi Mi 10T", brand: "Xiaomi", series: "Mi Series", display: "6.67\" IPS LCD, 144Hz", processor: "Snapdragon 865", ram: "8GB RAM", battery: "5000 mAh, 33W", camera: "64MP Triple", os: "Android 12", price: "₹35,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10t-5g.jpg", aiTag: "Official Photo: Cosmic Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4030, name: "Xiaomi Mi 10T Pro", brand: "Xiaomi", series: "Mi Series", display: "6.67\" IPS LCD, 144Hz", processor: "Snapdragon 865", ram: "8GB RAM", battery: "5000 mAh, 33W", camera: "108MP OIS", os: "Android 12", price: "₹39,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10t-pro-5g.jpg", aiTag: "Official Photo: Lunar Silver", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4031, name: "Xiaomi Mi 10T Lite", brand: "Xiaomi", series: "Mi Series", display: "6.67\" IPS LCD, 120Hz", processor: "Snapdragon 750G", ram: "6GB RAM", battery: "4820 mAh, 33W", camera: "64MP Quad", os: "Android 12", price: "₹23,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10t-lite-5g.jpg", aiTag: "Official Photo: Atlantic Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    // --- XIAOMI MI 11 SERIES ---
+    { id: 4032, name: "Xiaomi Mi 11", brand: "Xiaomi", series: "Mi Series", display: "6.81\" AMOLED 2K, 120Hz", processor: "Snapdragon 888 5G", ram: "8GB RAM", battery: "4600 mAh, 55W", camera: "108MP Triple OIS", os: "Android 14", price: "₹59,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11.jpg", aiTag: "Official Photo: Horizon Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4033, name: "Xiaomi Mi 11 Pro", brand: "Xiaomi", series: "Mi Series", display: "6.81\" AMOLED 2K, 120Hz", processor: "Snapdragon 888", ram: "8GB RAM", battery: "5000 mAh, 67W", camera: "50MP GN2 OIS", os: "Android 14", price: "₹64,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11-pro.jpg", aiTag: "Official Photo: Pine Green", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4034, name: "Xiaomi Mi 11 Ultra", brand: "Xiaomi", series: "Mi Series", display: "6.81\" AMOLED 2K, 120Hz + Rear Screen", processor: "Snapdragon 888", ram: "12GB RAM", battery: "5000 mAh, 67W", camera: "50MP + 48MP Periscope", os: "Android 14", price: "₹69,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11-ultra.jpg", aiTag: "Official Photo: Ceramic White", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4035, name: "Xiaomi Mi 11 Lite", brand: "Xiaomi", series: "Mi Series", display: "6.55\" AMOLED, 90Hz", processor: "Snapdragon 732G", ram: "6GB RAM", battery: "4250 mAh, 33W", camera: "64MP Triple", os: "Android 12", price: "₹21,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11-lite.jpg", aiTag: "Official Photo: Bubblegum Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4036, name: "Xiaomi Mi 11 Lite 5G", brand: "Xiaomi", series: "Mi Series", display: "6.55\" AMOLED, 90Hz", processor: "Snapdragon 780G", ram: "8GB RAM", battery: "4250 mAh, 33W", camera: "64MP Triple", os: "Android 13", price: "₹27,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11-lite-5g.jpg", aiTag: "Official Photo: Mint Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4037, name: "Xiaomi Mi 11 LE", brand: "Xiaomi", series: "Mi Series", display: "6.55\" AMOLED, 90Hz", processor: "Snapdragon 778G", ram: "8GB RAM", battery: "4250 mAh, 33W", camera: "64MP Triple", os: "Android 13", price: "₹25,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-11-lite-5g-ne.jpg", aiTag: "Official Photo: Truffle Black", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4038, name: "Xiaomi Mi 11X", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 870", ram: "6GB RAM", battery: "4520 mAh, 33W", camera: "48MP Triple", os: "Android 13", price: "₹29,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11x.jpg", aiTag: "Official Photo: Celestial Silver", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4039, name: "Xiaomi Mi 11X Pro", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 888", ram: "8GB RAM", battery: "4520 mAh, 33W", camera: "108MP Triple", os: "Android 13", price: "₹39,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11x-pro.jpg", aiTag: "Official Photo: Cosmic Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4040, name: "Xiaomi Mi 11i", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 888", ram: "8GB RAM", battery: "4520 mAh, 33W", camera: "108MP Triple", os: "Android 13", price: "₹34,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11i.jpg", aiTag: "Official Photo: Celestial Silver", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4041, name: "Xiaomi Mi 11i HyperCharge", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 888", ram: "8GB RAM", battery: "4500 mAh, 120W", camera: "108MP Triple", os: "Android 13", price: "₹38,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11i-hypercharge.jpg", aiTag: "Official Photo: Cosmic Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4042, name: "Xiaomi Mi 11T", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "MediaTek Dimensity 1200-Ultra", ram: "8GB RAM", battery: "5000 mAh, 67W", camera: "108MP Triple", os: "Android 13", price: "₹34,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11t.jpg", aiTag: "Official Photo: Meteorite Grey", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4043, name: "Xiaomi Mi 11T Pro", brand: "Xiaomi", series: "Mi Series", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 888", ram: "8GB RAM", battery: "5000 mAh, 120W", camera: "108MP Triple", os: "Android 13", price: "₹39,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-11t-pro.jpg", aiTag: "Official Photo: Celestial Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    // --- XIAOMI 12, 13, 14, 15 SERIES ---
+    { id: 4044, name: "Xiaomi 12", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.28\" AMOLED, 120Hz", processor: "Snapdragon 8 Gen 1", ram: "8GB RAM", battery: "4500 mAh, 67W", camera: "50MP Triple OIS", os: "HyperOS", price: "₹54,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12.jpg", aiTag: "Official Photo: Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4045, name: "Xiaomi 12 Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8 Gen 1", ram: "12GB RAM", battery: "4600 mAh, 120W", camera: "50MP Triple OIS", os: "HyperOS", price: "₹62,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12-pro.jpg", aiTag: "Official Photo: Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4046, name: "Xiaomi 12 Lite", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.55\" AMOLED, 120Hz", processor: "Snapdragon 778G", ram: "8GB RAM", battery: "4300 mAh, 67W", camera: "108MP Triple", os: "HyperOS", price: "₹28,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12-lite.jpg", aiTag: "Official Photo: Lite Pink", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4047, name: "Xiaomi 12X", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.28\" AMOLED, 120Hz", processor: "Snapdragon 870", ram: "8GB RAM", battery: "4500 mAh, 67W", camera: "50MP Triple OIS", os: "HyperOS", price: "₹45,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12x.jpg", aiTag: "Official Photo: Purple", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4048, name: "Xiaomi 12S", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.28\" AMOLED, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "8GB RAM", battery: "4500 mAh, 67W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹55,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12s.jpg", aiTag: "Official Photo: Leica Edition", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4049, name: "Xiaomi 12S Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "12GB RAM", battery: "4600 mAh, 120W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹65,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12s-pro.jpg", aiTag: "Official Photo: Leica Pro", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4050, name: "Xiaomi 12S Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "12GB RAM", battery: "4850 mAh, 67W Leica 1-inch", camera: "50.3MP Leica 1-inch Sensor", os: "HyperOS", price: "₹89,999", rating: "4.9", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12s-ultra.jpg", aiTag: "Official Photo: Classic Black Leica", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4051, name: "Xiaomi 12T", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 120Hz", processor: "MediaTek Dimensity 8100-Ultra", ram: "8GB RAM", battery: "5000 mAh, 120W", camera: "108MP OIS", os: "HyperOS", price: "₹39,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12t.jpg", aiTag: "Official Photo: Silver", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4052, name: "Xiaomi 12T Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "12GB RAM", battery: "5000 mAh, 120W", camera: "200MP ISOCELL HP1", os: "HyperOS", price: "₹49,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-12t-pro.jpg", aiTag: "Official Photo: Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 4053, name: "Xiaomi 13", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.36\" AMOLED, 120Hz", processor: "Snapdragon 8 Gen 2", ram: "8GB RAM", battery: "4500 mAh, 67W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹64,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13.jpg", aiTag: "Official Photo: Flora Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4054, name: "Xiaomi 13 Lite", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.55\" AMOLED, 120Hz", processor: "Snapdragon 7 Gen 1", ram: "8GB RAM", battery: "4500 mAh, 67W", camera: "50MP Dual Selfie", os: "HyperOS", price: "₹32,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13-lite.jpg", aiTag: "Official Photo: Lite Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4055, name: "Xiaomi 13 Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Gen 2", ram: "12GB RAM", battery: "4820 mAh, 120W Leica", camera: "50.3MP 1-inch Leica Triple", os: "HyperOS", price: "₹79,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13-pro.jpg", aiTag: "Official Photo: Ceramic White Leica", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4056, name: "Xiaomi 13 Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Gen 2", ram: "16GB RAM", battery: "5000 mAh, 90W Leica", camera: "Quad 50MP Leica Setup", os: "HyperOS", price: "₹94,999", rating: "4.9", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13-ultra.jpg", aiTag: "Official Photo: Olive Green Leica", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4057, name: "Xiaomi 13T", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 144Hz", processor: "MediaTek Dimensity 8200-Ultra", ram: "8GB RAM", battery: "5000 mAh, 67W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹42,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13t.jpg", aiTag: "Official Photo: Meadow Green", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4058, name: "Xiaomi 13T Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 144Hz", processor: "MediaTek Dimensity 9200+", ram: "12GB RAM", battery: "5000 mAh, 120W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹54,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-13t-pro.jpg", aiTag: "Official Photo: Alpine Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 4059, name: "Xiaomi 14", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.36\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8 Gen 3", ram: "12GB RAM", battery: "4610 mAh, 90W Leica", camera: "50MP Leica Triple OIS", os: "Xiaomi HyperOS", price: "₹69,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14.jpg", aiTag: "Official Photo: Jade Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4060, name: "Xiaomi 14 Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Gen 3", ram: "12GB RAM", battery: "4880 mAh, 120W Leica", camera: "50MP Leica Triple OIS", os: "Xiaomi HyperOS", price: "₹79,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-pro.jpg", aiTag: "Official Photo: Titan Gray", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4061, name: "Xiaomi 14 Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8 Gen 3", ram: "16GB RAM", battery: "5000 mAh, 90W", camera: "50MP Leica Quad Setup", os: "Xiaomi HyperOS", price: "₹99,999", rating: "4.9", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-ultra.jpg", aiTag: "Official Photo: Titanium Black Leica", stores: [{ name: "Amazon", url: "https://www.amazon.in" }, { name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4062, name: "Xiaomi 14T", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 144Hz", processor: "MediaTek Dimensity 8300-Ultra", ram: "12GB RAM", battery: "5000 mAh, 67W Leica", camera: "50MP Leica Triple", os: "Xiaomi HyperOS", price: "₹45,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14t.jpg", aiTag: "Official Photo: Titan Gray", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4063, name: "Xiaomi 14T Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.67\" AMOLED, 144Hz", processor: "MediaTek Dimensity 9300+", ram: "12GB RAM", battery: "5000 mAh, 120W Leica", camera: "50MP Leica Triple", os: "Xiaomi HyperOS", price: "₹59,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14t-pro.jpg", aiTag: "Official Photo: Titan Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4064, name: "Xiaomi 14 CIVI", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 8s Gen 3", ram: "8GB RAM", battery: "4700 mAh, 67W Leica", camera: "50MP Dual Selfie + Leica", os: "Xiaomi HyperOS", price: "₹39,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-14-civi.jpg", aiTag: "Official Photo: Cruise Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    { id: 4065, name: "Xiaomi 15", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.36\" LTPO AMOLED, 120Hz", processor: "Snapdragon 8 Elite", ram: "12GB RAM", battery: "5400 mAh, 90W Leica", camera: "50MP Leica Triple", os: "Xiaomi HyperOS 3", price: "₹69,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15.jpg", aiTag: "Official Photo: Lilac Purple", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4066, name: "Xiaomi 15 Pro", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.73\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Elite", ram: "12GB RAM", battery: "6100 mAh, 90W", camera: "50MP Leica Triple OIS", os: "Xiaomi HyperOS 3", price: "₹74,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-pro.jpg", aiTag: "Official Photo: Rock Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4067, name: "Xiaomi 15 Ultra", brand: "Xiaomi", series: "Xiaomi Flagship", display: "6.82\" LTPO AMOLED 2K, 120Hz", processor: "Snapdragon 8 Elite Gen 5", ram: "16GB RAM", battery: "6200 mAh, 100W", camera: "200MP Leica Quad Setup", os: "Xiaomi HyperOS 3", price: "₹1,14,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-15-ultra.jpg", aiTag: "Official Photo: Leica Master Black", stores: [{ name: "Amazon", url: "https://www.amazon.in" }, { name: "Mi Store", url: "https://www.mi.com" }] },
+
+    // --- XIAOMI CIVI, FOLDABLES & PADS ---
+    { id: 4068, name: "Xiaomi Civi", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 778G", ram: "8GB RAM", battery: "4500 mAh, 55W", camera: "64MP Triple", os: "HyperOS", price: "₹29,999", rating: "4.3", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi.jpg", aiTag: "Official Photo: Light Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4069, name: "Xiaomi Civi 1S", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 778G+", ram: "8GB RAM", battery: "4500 mAh, 55W", camera: "64MP Triple", os: "HyperOS", price: "₹31,999", rating: "4.4", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi-1s.jpg", aiTag: "Official Photo: Miracle Sunshine", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4070, name: "Xiaomi Civi 2", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 7 Gen 1", ram: "8GB RAM", battery: "4500 mAh, 67W", camera: "50MP Dual Selfie", os: "HyperOS", price: "₹33,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi-2.jpg", aiTag: "Official Photo: Bubble Ice Blue", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4071, name: "Xiaomi Civi 3", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "MediaTek Dimensity 8200-Ultra", ram: "12GB RAM", battery: "4500 mAh, 67W", camera: "50MP Dual Selfie", os: "HyperOS", price: "₹34,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi-3.jpg", aiTag: "Official Photo: Rose Purple", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4072, name: "Xiaomi Civi 4 Pro", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 8s Gen 3", ram: "12GB RAM", battery: "4700 mAh, 67W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹37,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi-4-pro.jpg", aiTag: "Official Photo: Spring Breeze Green", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4073, name: "Xiaomi CIVI 5 Pro", brand: "Xiaomi", series: "Civi Series", display: "6.55\" Curved AMOLED, 120Hz", processor: "Snapdragon 8s Gen 3", ram: "12GB RAM", battery: "5000 mAh, 67W", camera: "50MP Dual Selfie + Leica", os: "HyperOS", price: "₹34,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-civi-5-pro.jpg", aiTag: "Official Photo: Velvet Pink", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+
+    { id: 4074, name: "Xiaomi Mix Fold", brand: "Xiaomi", series: "Foldables", display: "8.01\" Foldable AMOLED + 6.52\" Cover", processor: "Snapdragon 888", ram: "12GB RAM", battery: "5020 mAh, 67W", camera: "108MP Liquid Lens", os: "HyperOS", price: "₹1,19,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-mix-fold.jpg", aiTag: "Official Photo: Ceramic Black", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4075, name: "Xiaomi Mix Fold 2", brand: "Xiaomi", series: "Foldables", display: "8.02\" Foldable AMOLED, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "12GB RAM", battery: "4500 mAh, 67W Leica", camera: "50MP Leica Triple", os: "HyperOS", price: "₹1,29,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold-2.jpg", aiTag: "Official Photo: Moon Shadow Black", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4076, name: "Xiaomi Mix Fold 3", brand: "Xiaomi", series: "Foldables", display: "8.03\" Foldable AMOLED, 120Hz", processor: "Snapdragon 8 Gen 2", ram: "16GB RAM", battery: "4800 mAh, 67W Leica", camera: "50MP Leica Quad Setup", os: "HyperOS", price: "₹1,34,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold-3.jpg", aiTag: "Official Photo: Fiber Edition", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4077, name: "Xiaomi Mix Fold 4", brand: "Xiaomi", series: "Foldables", display: "7.98\" Foldable AMOLED, 120Hz", processor: "Snapdragon 8 Gen 3", ram: "16GB RAM", battery: "5100 mAh, 67W", camera: "50MP Leica Foldable Setup", os: "HyperOS", price: "₹1,39,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-fold-4.jpg", aiTag: "Official Photo: Carbon Fiber", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4078, name: "Xiaomi Mix Flip", brand: "Xiaomi", series: "Foldables", display: "6.86\" Foldable AMOLED + 4.01\" Cover Display", processor: "Snapdragon 8 Gen 3", ram: "12GB RAM", battery: "4780 mAh, 67W Leica", camera: "50MP Leica Dual", os: "HyperOS", price: "₹79,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip.jpg", aiTag: "Official Photo: Black Flip", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4079, name: "Xiaomi Mix Flip 2", brand: "Xiaomi", series: "Foldables", display: "6.86\" Foldable AMOLED + 4.0\" Cover Display", processor: "Snapdragon 8 Elite", ram: "12GB RAM", battery: "4900 mAh, 67W", camera: "50MP Leica Dual", os: "HyperOS", price: "₹89,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mix-flip-2.jpg", aiTag: "Official Photo: Purple Flip", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+
+    { id: 4080, name: "Xiaomi Pad 5", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.0\" IPS LCD, 120Hz", processor: "Snapdragon 860", ram: "6GB RAM", battery: "8720 mAh, 33W", camera: "13MP Main", os: "HyperOS", price: "₹26,999", rating: "4.5", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-5.jpg", aiTag: "Official Photo: Cosmic Gray", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4081, name: "Xiaomi Pad 5 Pro", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.0\" IPS LCD, 120Hz", processor: "Snapdragon 870", ram: "6GB RAM", battery: "8600 mAh, 67W", camera: "13MP + 5MP", os: "HyperOS", price: "₹31,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-5-pro.jpg", aiTag: "Official Photo: White Tablet", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4082, name: "Xiaomi Pad 6", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.0\" IPS LCD 2.8K, 144Hz", processor: "Snapdragon 870", ram: "6GB RAM", battery: "8840 mAh, 33W", camera: "13MP Main", os: "Xiaomi HyperOS", price: "₹26,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6.jpg", aiTag: "Official Photo: Mist Blue", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4083, name: "Xiaomi Pad 6 Pro", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.0\" IPS LCD 2.8K, 144Hz", processor: "Snapdragon 8+ Gen 1", ram: "8GB RAM", battery: "8600 mAh, 67W", camera: "50MP Dual", os: "Xiaomi HyperOS", price: "₹34,999", rating: "4.7", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6-pro.jpg", aiTag: "Official Photo: Black Pro", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] },
+    { id: 4084, name: "Xiaomi Pad 6 Max 14", brand: "Xiaomi", series: "Xiaomi Pad", display: "14.0\" IPS LCD 2.8K, 120Hz", processor: "Snapdragon 8+ Gen 1", ram: "8GB RAM", battery: "10000 mAh, 67W", camera: "50MP Dual", os: "Xiaomi HyperOS", price: "₹49,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6-max-14.jpg", aiTag: "Official Photo: Massive 14-inch", stores: [{ name: "Mi Store", url: "https://www.mi.com" }] },
+    { id: 4085, name: "Xiaomi Pad 6S Pro", brand: "Xiaomi", series: "Xiaomi Pad", display: "12.4\" 3K IPS LCD, 144Hz", processor: "Snapdragon 8 Gen 2", ram: "8GB RAM", battery: "10000 mAh, 120W", camera: "50MP Dual", os: "Xiaomi HyperOS", price: "₹42,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-6s-pro.jpg", aiTag: "Official Photo: Graphite Gray", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4086, name: "Xiaomi Pad 7", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.2\" 3.2K IPS LCD, 144Hz", processor: "Snapdragon 7+ Gen 3", ram: "8GB RAM", battery: "8850 mAh, 45W", camera: "13MP Main", os: "Xiaomi HyperOS", price: "₹29,999", rating: "4.6", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-7.jpg", aiTag: "Official Photo: Pad 7 Green", stores: [{ name: "Amazon", url: "https://www.amazon.in" }] },
+    { id: 4087, name: "Xiaomi Pad 7 Pro", brand: "Xiaomi", series: "Xiaomi Pad", display: "11.2\" 3.2K IPS LCD, 144Hz", processor: "Snapdragon 8s Gen 3", ram: "12GB RAM", battery: "8850 mAh, 67W", camera: "50MP Dual", os: "Xiaomi HyperOS", price: "₹39,999", rating: "4.8", image: "https://fdn2.gsmarena.com/vv/bigpic/xiaomi-pad-7-pro.jpg", aiTag: "Official Photo: Cosmic Gray Tablet", stores: [{ name: "Flipkart", url: "https://www.flipkart.com" }] }
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+    initCatalog(devices);
+    initSelectors();
+    initFilters();
+    initChatWidget();
+    initSearch();
+    simulateAiSync();
+});
+
+function simulateAiSync() {
+    const syncStatus = document.getElementById("sync-status");
+    setTimeout(() => {
+        syncStatus.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>Complete Xiaomi Archive Live</span>`;
+        syncStatus.style.backgroundColor = "rgba(16, 185, 129, 0.2)";
+    }, 1500);
+}
+
+// Populate Catalog Grid
+function initCatalog(data) {
+    const catalog = document.getElementById("device-catalog");
+    document.getElementById("catalog-count").textContent = data.length;
+    
+    if (data.length === 0) {
+        catalog.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-secondary); padding: 2rem;">No devices found matching your search.</p>`;
+        return;
+    }
+
+    catalog.innerHTML = data.map(d => `
+        <div class="device-item-card">
+            <div class="device-img-container">
+                <div class="ai-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> ${d.aiTag}</div>
+                <div class="device-rating-badge"><i class="fa-solid fa-star"></i> ${d.rating}</div>
+                <img src="${d.image}" alt="${d.name}" onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&auto=format&fit=crop&q=60'">
+            </div>
+            <div class="device-card-content">
+                <h4>${d.name}</h4>
+                <p><strong>Brand:</strong> ${d.brand} (${d.series})</p>
+                <p><strong>Display:</strong> ${d.display}</p>
+                <p><strong>Proc:</strong> ${d.processor} | <strong>RAM:</strong> ${d.ram}</p>
+                <p><strong>Battery:</strong> ${d.battery}</p>
+                <p><strong>Camera:</strong> ${d.camera}</p>
+                <p><strong>OS:</strong> ${d.os}</p>
+                <p style="color: var(--accent-color); font-weight: bold; margin-top: 0.2rem;">${d.price}</p>
+                
+                <div class="store-links-box">
+                    <span class="store-links-title">E-Commerce & Retail Stores:</span>
+                    <div class="store-badges">
+                        ${d.stores.map(s => `<a href="${s.url}" target="_blank" class="store-badge"><i class="fa-solid fa-cart-shopping"></i> ${s.name}</a>`).join("")}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join("");
+}
+
+// Populate Comparison Dropdowns
+function initSelectors() {
+    const selectors = document.querySelectorAll(".device-selector");
+    selectors.forEach(select => {
+        select.innerHTML = '<option value="">Select Device</option>';
+        devices.forEach(d => {
+            const opt = document.createElement("option");
+            opt.value = d.id;
+            opt.textContent = `${d.brand} - ${d.name}`;
+            select.appendChild(opt);
+        });
+
+        select.addEventListener("change", (e) => {
+            const slotId = e.target.getAttribute("data-slot");
+            const deviceId = e.target.value;
+            updatePreview(slotId, deviceId);
+        });
+    });
+}
+
+// Update Side-by-Side Pro Preview Card
+function updatePreview(slotId, deviceId) {
+    const previewContainer = document.getElementById(`preview-${slotId}`);
+    if (!deviceId) {
+        previewContainer.innerHTML = "Please select a device";
+        return;
+    }
+    const device = devices.find(d => d.id == deviceId);
+    previewContainer.innerHTML = `
+        <p><strong>${device.name}</strong> ⭐ ${device.rating}</p>
+        <p><strong>Display:</strong> ${device.display}</p>
+        <p><strong>Processor:</strong> ${device.processor}</p>
+        <p><strong>RAM & Storage:</strong> ${device.ram}</p>
+        <p><strong>Battery & Charge:</strong> ${device.battery}</p>
+        <p><strong>Camera:</strong> ${device.camera}</p>
+        <p><strong>OS:</strong> ${device.os}</p>
+        <p style="margin-top: 0.4rem; font-size: 1.1rem; color: var(--accent-color); font-weight: bold;">${device.price}</p>
+    `;
+}
+
+// Filter Functionality by Brand Chips
+function initFilters() {
+    const chips = document.querySelectorAll(".chip");
+    chips.forEach(chip => {
+        chip.addEventListener("click", (e) => {
+            chips.forEach(c => c.classList.remove("active"));
+            e.target.classList.add("active");
+            
+            const brand = e.target.getAttribute("data-brand");
+            if (brand === "all") {
+                initCatalog(devices);
+            } else {
+                const filtered = devices.filter(d => d.brand.toLowerCase() === brand.toLowerCase());
+                initCatalog(filtered);
+            }
+        });
+    });
+}
+
+// Advanced Real-time Search Engine
+function initSearch() {
+    const searchInput = document.getElementById("device-search");
+    searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        const filtered = devices.filter(d => 
+            d.name.toLowerCase().includes(query) || 
+            d.brand.toLowerCase().includes(query) || 
+            d.series.toLowerCase().includes(query) ||
+            d.processor.toLowerCase().includes(query) ||
+            d.display.toLowerCase().includes(query) ||
+            d.camera.toLowerCase().includes(query)
+        );
+        initCatalog(filtered);
+    });
+}
+
+// ==========================================
+// GOOGLE AI GEMINI API & SUPPORT CHAT WIDGET
+// ==========================================
+function initChatWidget() {
+    const toggleBtn = document.getElementById("chat-toggle-btn");
+    const closeBtn = document.getElementById("chat-close");
+    const chatWindow = document.getElementById("chat-window");
+    const sendBtn = document.getElementById("chat-send");
+    const chatInput = document.getElementById("chat-input");
+    const chatBody = document.getElementById("chat-body");
+    const quickChips = document.querySelectorAll(".quick-chip");
+
+    toggleBtn.addEventListener("click", () => chatWindow.classList.toggle("hidden"));
+    closeBtn.addEventListener("click", () => chatWindow.classList.add("hidden"));
+
+    const appendMessage = (text, sender) => {
+        const msgDiv = document.createElement("div");
+        msgDiv.className = `chat-message ${sender}`;
+        msgDiv.textContent = text;
+        chatBody.appendChild(msgDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    };
+
+    const handleGeminiQuery = async (userText) => {
+        if (!userText.trim()) return;
+
+        appendMessage(userText, "user");
+        chatInput.value = "";
+
+        const loadingId = "loading-" + Date.now();
+        const loadingDiv = document.createElement("div");
+        loadingDiv.className = "chat-message bot";
+        loadingDiv.id = loadingId;
+        loadingDiv.textContent = "AI Pro is searching the complete Xiaomi archive...";
+        chatBody.appendChild(loadingDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        try {
+            const dbContext = JSON.stringify(devices);
+            const prompt = `You are the official Pro Support AI for 'Compare Zone'. Use this complete Xiaomi database: ${dbContext}. Customer Question: "${userText}"`;
+
+            const API_KEY = "YOUR_GEMINI_API_KEY"; 
+            const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`;
+
+            const response = await fetch(endpoint, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    contents: [{ parts: [{ text: prompt }] }]
+                })
+            });
+
+            const data = await response.json();
+            const botReply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'm sorry, I couldn't process that query right now. Check our catalog filters above!";
+
+            document.getElementById(loadingId).remove();
+            appendMessage(botReply, "bot");
+
+        } catch (error) {
+            document.getElementById(loadingId).remove();
+            const fallbackReply = getDatabaseFallback(userText);
+            appendMessage(fallbackReply, "bot");
+        }
+    };
+
+    function getDatabaseFallback(query) {
+        const q = query.toLowerCase();
+        if (q.includes("xiaomi") || q.includes("mi")) {
+            return "Our database features the complete Xiaomi archive including Mi 8, Mi 9, Mi 10, Mi 11, Xiaomi 12-15 flagships, Civi, Fold/Flip, and Xiaomi Pads with official model photos!";
+        }
+        return "You can explore all Xiaomi models with official photos, pro specs, ratings, and live store buy links inside the catalog!";
+    }
+
+    sendBtn.addEventListener("click", () => handleGeminiQuery(chatInput.value));
+    chatInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") handleGeminiQuery(chatInput.value);
+    });
+
+    quickChips.forEach(chip => {
+        chip.addEventListener("click", (e) => {
+            const queryText = e.target.getAttribute("data-query");
+            handleGeminiQuery(queryText);
+        });
+    });
+}
