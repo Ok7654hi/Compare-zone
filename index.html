@@ -708,3 +708,1473 @@ Install App
 </div>
 
 </section>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+<title>Compare Phones | Compare Zone</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="assets/logo.png">
+
+<span>Compare Zone</span>
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="compare.html" class="active">Compare</a></li>
+
+<li><a href="brands.html">Brands</a></li>
+
+<li><a href="latest.html">Latest</a></li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- Page Banner -->
+
+<section class="page-banner">
+
+<div class="container">
+
+<h1>
+
+Compare Smartphones
+
+</h1>
+
+<p>
+
+Compare specifications, cameras, battery,
+display, processor and prices.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- Phone Selection -->
+
+<section class="compare-selection">
+
+<div class="container">
+
+<div class="compare-select-grid">
+
+<select id="phoneOne">
+
+<option>Select Phone 1</option>
+
+</select>
+
+<select id="phoneTwo">
+
+<option>Select Phone 2</option>
+
+</select>
+
+<select id="phoneThree">
+
+<option>Select Phone 3</option>
+
+</select>
+
+<button id="startCompare">
+
+Compare Now
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Comparison Result -->
+
+<section class="comparison-result">
+
+<div class="container">
+
+<div id="comparisonTable">
+
+<p>
+
+Select up to three phones to compare.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- AI Recommendation -->
+
+<section class="compare-ai">
+
+<div class="container">
+
+<h2>
+
+AI Comparison Summary
+
+</h2>
+
+<div id="aiCompareResult">
+
+AI will summarize which phone is better
+for gaming, camera, battery,
+performance and value.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Similar Phones -->
+
+<section class="similar-phones">
+
+<div class="container">
+
+<h2>
+
+Similar Smartphones
+
+</h2>
+
+<div id="similarPhones">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Recently Compared -->
+
+<section class="history">
+
+<div class="container">
+
+<h2>
+
+Recently Compared
+
+</h2>
+
+<div id="historyGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 Compare Zone
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/database.js"></script>
+
+<script src="js/compare.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Phone Details | Compare Zone</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="assets/logo.png" alt="Compare Zone">
+
+<span>Compare Zone</span>
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="compare.html">Compare</a></li>
+
+<li><a href="brands.html">Brands</a></li>
+
+<li><a href="latest.html">Latest</a></li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- =========================
+BREADCRUMB
+========================= -->
+
+<section class="breadcrumb">
+
+<div class="container">
+
+<a href="index.html">Home</a>
+
+>
+
+<a href="brands.html">Brands</a>
+
+>
+
+<span id="phoneNameTop">
+
+Phone Name
+
+</span>
+
+</div>
+
+</section>
+
+<!-- =========================
+PHONE DETAILS
+========================= -->
+
+<section class="phone-details">
+
+<div class="container">
+
+<div class="phone-layout">
+
+<!-- Gallery -->
+
+<div class="gallery">
+
+<img
+
+id="mainImage"
+
+src="assets/images/no-image.png"
+
+alt="Phone Image">
+
+<div id="thumbnailGallery">
+
+</div>
+
+</div>
+
+<!-- Details -->
+
+<div class="details">
+
+<h1 id="phoneName">
+
+Loading...
+
+</h1>
+
+<p id="phoneBrand">
+
+Brand
+
+</p>
+
+<div class="rating">
+
+★★★★★
+
+<span id="ratingValue">
+
+0.0
+
+</span>
+
+</div>
+
+<h2 id="phonePrice">
+
+₹0
+
+</h2>
+
+<div class="buttons">
+
+<button id="compareBtn">
+
+Compare
+
+</button>
+
+<button id="wishlistBtn">
+
+Wishlist
+
+</button>
+
+<button id="shareBtn">
+
+Share
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+SPECIFICATIONS
+========================= -->
+
+<section class="specifications">
+
+<div class="container">
+
+<h2>
+
+Specifications
+
+</h2>
+
+<table id="specTable">
+
+<tr>
+
+<th>Display</th>
+
+<td id="displaySpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Processor</th>
+
+<td id="processorSpec"></td>
+
+</tr>
+
+<tr>
+
+<th>RAM</th>
+
+<td id="ramSpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Storage</th>
+
+<td id="storageSpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Camera</th>
+
+<td id="cameraSpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Battery</th>
+
+<td id="batterySpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Operating System</th>
+
+<td id="osSpec"></td>
+
+</tr>
+
+<tr>
+
+<th>Connectivity</th>
+
+<td id="networkSpec"></td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- =========================
+PRICE HISTORY
+========================= -->
+
+<section class="price-history">
+
+<div class="container">
+
+<h2>
+
+Price History
+
+</h2>
+
+<div id="priceChart">
+
+Price chart will load here.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+BUY OPTIONS
+========================= -->
+
+<section class="buy-section">
+
+<div class="container">
+
+<h2>
+
+Buy Now
+
+</h2>
+
+<div class="buy-grid">
+
+<a id="amazonLink"
+
+target="_blank"
+
+class="buy-card">
+
+Amazon
+
+</a>
+
+<a id="flipkartLink"
+
+target="_blank"
+
+class="buy-card">
+
+Flipkart
+
+</a>
+
+<a id="officialLink"
+
+target="_blank"
+
+class="buy-card">
+
+Official Store
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+AI SUMMARY
+========================= -->
+
+<section class="ai-summary">
+
+<div class="container">
+
+<h2>
+
+AI Recommendation
+
+</h2>
+
+<div id="aiSummary">
+
+AI will analyze this phone for gaming,
+camera, battery, display,
+performance and value.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+USER REVIEWS
+========================= -->
+
+<section class="reviews">
+
+<div class="container">
+
+<h2>
+
+User Reviews
+
+</h2>
+
+<div id="reviewList">
+
+</div>
+
+<button id="writeReview">
+
+Write Review
+
+</button>
+
+</div>
+
+</section>
+
+<!-- =========================
+SIMILAR PHONES
+========================= -->
+
+<section class="similar">
+
+<div class="container">
+
+<h2>
+
+Similar Phones
+
+</h2>
+
+<div id="similarGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+LATEST NEWS
+========================= -->
+
+<section class="phone-news">
+
+<div class="container">
+
+<h2>
+
+Related News
+
+</h2>
+
+<div id="phoneNews">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 Compare Zone
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/database.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Brands | Compare Zone</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+HEADER
+========================= -->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="assets/logo.png" alt="Compare Zone">
+
+<span>Compare Zone</span>
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="compare.html">Compare</a></li>
+
+<li><a href="brands.html" class="active">Brands</a></li>
+
+<li><a href="latest.html">Latest</a></li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- =========================
+PAGE TITLE
+========================= -->
+
+<section class="page-banner">
+
+<div class="container">
+
+<h1>
+
+Smartphone Brands
+
+</h1>
+
+<p>
+
+Browse every supported smartphone manufacturer.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- =========================
+SEARCH
+========================= -->
+
+<section class="brand-search">
+
+<div class="container">
+
+<input
+
+type="text"
+
+id="brandSearch"
+
+placeholder="Search Brand...">
+
+</div>
+
+</section>
+
+<!-- =========================
+BRANDS GRID
+========================= -->
+
+<section class="brands-page">
+
+<div class="container">
+
+<div id="brandGrid" class="brand-grid">
+
+<!-- Loaded by JavaScript -->
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+TOP BRANDS
+========================= -->
+
+<section class="top-brands">
+
+<div class="container">
+
+<h2>
+
+Popular Brands
+
+</h2>
+
+<div class="top-grid">
+
+<div class="brand-card">
+🍎 Apple
+</div>
+
+<div class="brand-card">
+📱 Samsung
+</div>
+
+<div class="brand-card">
+⚡ Xiaomi
+</div>
+
+<div class="brand-card">
+🚀 OnePlus
+</div>
+
+<div class="brand-card">
+📷 Google Pixel
+</div>
+
+<div class="brand-card">
+🔥 Realme
+</div>
+
+<div class="brand-card">
+💎 Vivo
+</div>
+
+<div class="brand-card">
+🎯 Oppo
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+BRAND STATISTICS
+========================= -->
+
+<section class="statistics">
+
+<div class="container">
+
+<h2>
+
+Database Statistics
+
+</h2>
+
+<div class="stats-grid">
+
+<div class="stat-box">
+
+<h3 id="brandCount">
+
+0
+
+</h3>
+
+<p>
+
+Brands
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3 id="phoneCount">
+
+0
+
+</h3>
+
+<p>
+
+Phones
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>
+
+2015-2027
+
+</h3>
+
+<p>
+
+Launch Years
+
+</p>
+
+</div>
+
+<div class="stat-box">
+
+<h3>
+
+5G+
+
+</h3>
+
+<p>
+
+Technology
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+ALPHABET FILTER
+========================= -->
+
+<section class="alphabet">
+
+<div class="container">
+
+<h2>
+
+Browse Alphabetically
+
+</h2>
+
+<div class="alphabet-grid">
+
+<a href="#">A</a>
+<a href="#">B</a>
+<a href="#">C</a>
+<a href="#">D</a>
+<a href="#">E</a>
+<a href="#">F</a>
+<a href="#">G</a>
+<a href="#">H</a>
+<a href="#">I</a>
+<a href="#">J</a>
+<a href="#">K</a>
+<a href="#">L</a>
+<a href="#">M</a>
+<a href="#">N</a>
+<a href="#">O</a>
+<a href="#">P</a>
+<a href="#">Q</a>
+<a href="#">R</a>
+<a href="#">S</a>
+<a href="#">T</a>
+<a href="#">U</a>
+<a href="#">V</a>
+<a href="#">W</a>
+<a href="#">X</a>
+<a href="#">Y</a>
+<a href="#">Z</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FEATURED BRANDS
+========================= -->
+
+<section class="featured-brands">
+
+<div class="container">
+
+<h2>
+
+Featured Brands
+
+</h2>
+
+<div id="featuredBrandGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 Compare Zone
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/database.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Brand | Compare Zone</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/responsive.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header>
+
+<div class="container">
+
+<div class="logo">
+
+<a href="index.html">
+
+<img src="assets/logo.png" alt="Compare Zone">
+
+<span>Compare Zone</span>
+
+</a>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="compare.html">Compare</a></li>
+
+<li><a href="brands.html">Brands</a></li>
+
+<li><a href="latest.html">Latest</a></li>
+
+<li><a href="wishlist.html">Wishlist</a></li>
+
+</ul>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- ===========================
+BRAND HERO
+=========================== -->
+
+<section class="brand-hero">
+
+<div class="container">
+
+<div class="brand-header">
+
+<img
+id="brandLogo"
+src="assets/images/brand.png"
+alt="Brand Logo">
+
+<div>
+
+<h1 id="brandTitle">
+
+Brand Name
+
+</h1>
+
+<p id="brandDescription">
+
+Brand information will load dynamically.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+STATISTICS
+=========================== -->
+
+<section class="brand-stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<h2 id="totalPhones">
+
+0
+
+</h2>
+
+<p>Total Phones</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="latestLaunch">
+
+0
+
+</h2>
+
+<p>Latest Launch</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="averageRating">
+
+0.0
+
+</h2>
+
+<p>Average Rating</p>
+
+</div>
+
+<div class="stat-card">
+
+<h2 id="priceRange">
+
+₹0
+
+</h2>
+
+<p>Starting Price</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FILTERS
+=========================== -->
+
+<section class="filters">
+
+<div class="container">
+
+<div class="filter-row">
+
+<input
+type="text"
+id="brandSearch"
+placeholder="Search this brand">
+
+<select id="yearFilter">
+
+<option value="">Launch Year</option>
+
+<option>2027</option>
+<option>2026</option>
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+<option>2022</option>
+<option>2021</option>
+<option>2020</option>
+<option>2019</option>
+<option>2018</option>
+<option>2017</option>
+<option>2016</option>
+<option>2015</option>
+
+</select>
+
+<select id="priceFilter">
+
+<option value="">Price Range</option>
+
+<option value="10000">Under ₹10,000</option>
+
+<option value="20000">Under ₹20,000</option>
+
+<option value="30000">Under ₹30,000</option>
+
+<option value="50000">Under ₹50,000</option>
+
+<option value="100000">Above ₹50,000</option>
+
+</select>
+
+<select id="sortFilter">
+
+<option value="latest">
+
+Newest
+
+</option>
+
+<option value="priceLow">
+
+Price Low to High
+
+</option>
+
+<option value="priceHigh">
+
+Price High to Low
+
+</option>
+
+<option value="rating">
+
+Highest Rated
+
+</option>
+
+</select>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+PHONE GRID
+=========================== -->
+
+<section class="brand-products">
+
+<div class="container">
+
+<div
+id="brandProductGrid"
+class="product-grid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+POPULAR SERIES
+=========================== -->
+
+<section class="series">
+
+<div class="container">
+
+<h2>
+
+Popular Series
+
+</h2>
+
+<div id="seriesGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+LATEST LAUNCHES
+=========================== -->
+
+<section class="latest-launches">
+
+<div class="container">
+
+<h2>
+
+Latest Launches
+
+</h2>
+
+<div id="latestLaunchGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+UPCOMING
+=========================== -->
+
+<section class="upcoming">
+
+<div class="container">
+
+<h2>
+
+Upcoming Models
+
+</h2>
+
+<div id="upcomingGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+BEST PHONES
+=========================== -->
+
+<section class="top-rated">
+
+<div class="container">
+
+<h2>
+
+Top Rated Phones
+
+</h2>
+
+<div id="topRatedGrid">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+AI INSIGHT
+=========================== -->
+
+<section class="ai-brand">
+
+<div class="container">
+
+<h2>
+
+AI Brand Analysis
+
+</h2>
+
+<div id="brandAI">
+
+AI will summarize this brand's strengths
+for camera, gaming, battery,
+software support and value.
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 Compare Zone
+
+</p>
+
+</div>
+
+</footer>
+
+<script src="js/database.js"></script>
+
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
