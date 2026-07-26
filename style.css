@@ -424,3 +424,438 @@ opacity:.8;
 
 }
 
+/* ===========================================
+   SEARCH SECTION
+=========================================== */
+
+.search-box{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+background:#fff;
+
+padding:15px;
+
+border-radius:15px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+margin:40px auto;
+
+max-width:900px;
+
+}
+
+.search-box input{
+
+flex:1;
+
+border:none;
+
+font-size:17px;
+
+background:transparent;
+
+}
+
+.search-box button{
+
+padding:14px 28px;
+
+background:#2563eb;
+
+color:#fff;
+
+border-radius:10px;
+
+font-weight:600;
+
+}
+
+.search-box button:hover{
+
+background:#1d4ed8;
+
+}
+/* ===========================================
+   BRANDS
+=========================================== */
+
+.brand-card{
+
+background:#fff;
+
+border-radius:18px;
+
+padding:30px;
+
+text-align:center;
+
+box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+transition:.35s;
+
+cursor:pointer;
+
+}
+
+.brand-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.brand-card img{
+
+height:70px;
+
+margin:auto;
+
+margin-bottom:15px;
+
+}
+
+.brand-card h3{
+
+font-size:22px;
+
+}
+
+.brand-card p{
+
+color:#666;
+
+margin-top:8px;
+
+}
+
+/* ===========================================
+   PRODUCT CARD
+=========================================== */
+
+.product-card{
+
+position:relative;
+
+}
+
+.product-card .rating{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:15px;
+
+color:#f59e0b;
+
+font-weight:bold;
+
+}
+
+.product-card .specs{
+
+padding:0 15px 15px;
+
+color:#666;
+
+font-size:14px;
+
+line-height:1.8;
+
+}
+
+.product-card .actions{
+
+display:flex;
+
+gap:10px;
+
+padding:15px;
+
+}
+
+.product-card .actions button{
+
+flex:1;
+
+padding:12px;
+
+border-radius:10px;
+
+font-weight:600;
+
+}
+
+.compare-btn{
+
+background:#2563eb;
+
+color:#fff;
+
+}
+
+.buy-btn{
+
+background:#16a34a;
+
+color:#fff;
+
+}
+/* ===========================================
+   TRENDING
+=========================================== */
+
+.trending{
+
+background:#f8fafc;
+
+}
+
+.trending h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:40px;
+
+}
+.latest{
+
+background:#fff;
+
+}
+
+.latest h2{
+
+text-align:center;
+
+font-size:38px;
+
+margin-bottom:40px;
+
+}
+/* ===========================================
+   STATS
+=========================================== */
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.stat-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:18px;
+
+text-align:center;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.stat-card h2{
+
+font-size:42px;
+
+color:#2563eb;
+
+margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+color:#666;
+
+}
+/* ===========================================
+   AI SECTION
+=========================================== */
+
+.ai-section{
+
+background:linear-gradient(135deg,#111827,#2563eb);
+
+color:#fff;
+
+text-align:center;
+
+border-radius:25px;
+
+padding:80px;
+
+margin:80px auto;
+
+}
+
+.ai-section h2{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+}
+
+.ai-section p{
+
+font-size:18px;
+
+opacity:.9;
+
+max-width:850px;
+
+margin:auto;
+
+}
+/* ===========================================
+   NEWSLETTER
+=========================================== */
+
+.newsletter{
+
+background:#2563eb;
+
+color:#fff;
+
+text-align:center;
+
+padding:80px 0;
+
+}
+
+.newsletter form{
+
+display:flex;
+
+gap:15px;
+
+justify-content:center;
+
+margin-top:30px;
+
+}
+
+.newsletter input{
+
+width:420px;
+
+}
+
+.newsletter button{
+
+padding:15px 35px;
+
+background:#fff;
+
+color:#2563eb;
+
+font-weight:bold;
+
+border-radius:10px;
+
+}
+/* ===========================================
+   FEATURES
+=========================================== */
+
+.feature-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.feature-card{
+
+background:#fff;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.feature-card i{
+
+font-size:48px;
+
+color:#2563eb;
+
+margin-bottom:20px;
+
+}
+
+.feature-card h3{
+
+margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+color:#666;
+
+}
+/* ===========================================
+   PAGE HEADER
+=========================================== */
+
+.page-banner{
+
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+padding:90px 0;
+
+text-align:center;
+
+color:#fff;
+
+}
+
+.page-banner h1{
+
+font-size:52px;
+
+margin-bottom:15px;
+
+}
+
+.page-banner p{
+
+font-size:20px;
+
+opacity:.9;
+
+}
