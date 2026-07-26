@@ -1,0 +1,43 @@
+.navbar{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+
+.navbar a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    color:#FFD700;
+}
+
+@media (max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.navbar{
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:36px;
+}
+
+.search-box input{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.search-box button{
+    width:100%;
+}
+
+}
