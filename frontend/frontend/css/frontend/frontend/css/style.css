@@ -1,0 +1,29 @@
+.trending,
+.deals,
+.ai-card{
+    padding:60px 8%;
+    text-align:center;
+}
+
+.ai-card{
+    background:#2563EB;
+    color:white;
+    border-radius:15px;
+    margin:40px;
+    padding:50px;
+}
+
+.ai-card button{
+    margin-top:20px;
+    padding:12px 25px;
+    background:#FFD700;
+    color:#000;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.ai-card button:hover{
+    background:#FFC107;
+}
