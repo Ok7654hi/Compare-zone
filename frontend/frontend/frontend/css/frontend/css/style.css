@@ -1,0 +1,40 @@
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    border-radius:12px;
+}
+
+#theme-toggle{
+    background:#FFD700;
+    color:#000;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+#theme-toggle:hover{
+    background:#FFC107;
+}
+
+.dark{
+    background:#111827;
+    color:white;
+}
+
+.dark .card{
+    background:#1F2937;
+    color:white;
+}
+
+.dark header,
+.dark footer{
+    background:#000;
+}
